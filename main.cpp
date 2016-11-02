@@ -70,13 +70,13 @@ void main()
 	// the "__global" keyword denotes that "global" device memory is used, which can be read and written 
 	// to by all work items (threads) and all work groups on the device and can also be read/written by the host (CPU)
 
-	string kernel_source =
+	const char* source_string  =
 		"	__kernel void parallel_add(__global float* x, __global float* y, __global float* z){	"
 		"	const int i = get_global_id(0);	" // get a unique number identifying the work item in the global pool
 		"	z[i] = y[i] + x[i];				" // add two arrays 
 		"}";
 
-	const char* source_string = kernel_source.c_str();
+	
 
 	// Create an OpenCL program by performing runtime source compilation
 	Program program = Program(context, source_string);
