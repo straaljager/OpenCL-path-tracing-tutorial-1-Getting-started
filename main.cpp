@@ -24,7 +24,10 @@ void main()
 	cout << endl << "Enter the number of the OpenCL platform you want to use: ";
 	unsigned int input = 0;
 	cin >> input;
+	// Handle incorrect user input
 	while (input < 1 || input > platforms.size()){
+		cin.clear(); //clear errors/bad flags on cin
+ 	 	cin.ignore(cin.rdbuf()->in_avail(), '\n'); // ignores exact number of chars in cin buffer
 		cout << "No such platform." << endl << "Enter the number of the OpenCL platform you want to use: ";
 		cin >> input;
 	}
@@ -47,7 +50,10 @@ void main()
 	cout << endl << "Enter the number of the OpenCL device you want to use: ";
 	input = 0;
 	cin >> input;
+	// Handle incorrect user input
 	while (input < 1 || input > devices.size()){
+		cin.clear(); //clear errors/bad flags on cin
+  		cin.ignore(cin.rdbuf()->in_avail(), '\n'); // ignores exact number of chars in cin buffer
 		cout << "No such device. Enter the number of the OpenCL device you want to use: ";
 		cin >> input;
 	}
