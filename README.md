@@ -2,6 +2,8 @@
 Introductory tutorial for setting up the OpenCL environment for parallel computation
 by Sam Lapere, 2016 
 
+This is a kind of "Hello World!" program for OpenCL, demonstrating how to add two arrays of numbers in parallel.
+
 Compiling instructions (for Visual Studio on Windows)
 
 To compile this code, it's recommended to download and install the AMD App SDK (this works for systems with GPUs or CPUs from AMD, Nvidia and Intel, even if your system doesn't have an AMD CPU or GPU installed) since Nvidia's OpenCL implementation is no longer up-to-date.
@@ -13,6 +15,7 @@ To compile this code, it's recommended to download and install the AMD App SDK (
 
 
 More details on this tutorial can be found at 
+
 http://raytracey.blogspot.co.nz/2016/11/opencl-path-tracing-tutorial-1-firing.html
 
 
